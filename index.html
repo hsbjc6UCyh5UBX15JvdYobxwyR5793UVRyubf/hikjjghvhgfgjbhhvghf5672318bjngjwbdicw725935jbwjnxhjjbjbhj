@@ -15963,12 +15963,13 @@ doSkip();
 });
 function scrollIfNeeded(){
 if(!halfScreenTriggered){
-if(overlay.scrollHeight>=overlay.clientHeight*0.5){
+if(overlay.scrollHeight>overlay.clientHeight){
 halfScreenTriggered=true;
 }
 }
 if(halfScreenTriggered){
-overlay.scrollTop+=lineHeight*2;
+overlay.scrollTop=overlay.scrollHeight;
+}
 }
 }
 function typeLine(){
